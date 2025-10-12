@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { FORUM_TOPICS } from '../constants';
 
@@ -25,16 +26,16 @@ export const ForumPage: React.FC = () => (
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th scope="col" className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Topic
               </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:table-cell">
+              <th scope="col" className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden md:table-cell">
                 Category
               </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden sm:table-cell">
+              <th scope="col" className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden sm:table-cell">
                 Replies
               </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th scope="col" className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Last Activity
               </th>
             </tr>
@@ -42,19 +43,19 @@ export const ForumPage: React.FC = () => (
           <tbody className="bg-white divide-y divide-gray-200">
             {FORUM_TOPICS.map((topic) => (
               <tr key={topic.id} className="hover:bg-gray-50 transition-colors">
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
                   <div className="font-medium text-gray-800 hover:text-teal-700 cursor-pointer">{topic.title}</div>
                   <div className="text-xs text-gray-500">by {topic.author} &bull; {topic.time}</div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap hidden md:table-cell">
+                <td className="px-4 sm:px-6 py-4 whitespace-nowrap hidden md:table-cell">
                   <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${categoryColors[topic.category] || 'bg-gray-100 text-gray-800'}`}>
                     {topic.category}
                   </span>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell">
+                <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell">
                   {topic.replies}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {topic.lastActivity}
                 </td>
               </tr>

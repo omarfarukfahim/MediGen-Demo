@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Page } from '../types';
 
@@ -22,8 +23,8 @@ export const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight">Your Health, Simplified</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">Find trusted doctors, get instant answers from our AI, and stay informed with expert health articles.</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight">Your Health, Simplified</h1>
+        <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">Find trusted doctors, get instant answers from our AI, and stay informed with expert health articles.</p>
       </div>
 
       <div className="max-w-2xl mx-auto mb-12">
